@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Transportation</title>
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="menu-btn" onclick="toggleSidebar()">☰</div>
+
+<div class="sidebar">
+  <h2>Ethioturism</h2>
+
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="culture.html"><i class="fas fa-globe"></i> Culture</a>
+  <a href="history.html"><i class="fas fa-landmark"></i> History</a>
+  <a href="land_animal.html"><i class="fas fa-paw"></i> Land & Animals</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<!-- HERO -->
+<div class="home-hero transport-bg">
+  <div class="hero-box">
+    <h1>Transportation</h1>
+    <p>Choose and explore transport options</p>
+  </div>
+</div>
+
+<div class="cards">
+
+<!-- 1 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>Ride Taxi</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Fast city rides in Addis Ababa</p>
+<p>📞 0912345678</p>
+<a href="tel:0912345678">
+  <button class="call-btn">Call Now</button>
+</a>
+
+</div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>Yango</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Popular ride-hailing app</p>
+<p>📞 0923456789</p><a href="tel:0923456789">
+  <button class="call-btn">Call Now</button>
+</a>
+
+</div>
+
+</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>Feres Ride</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Affordable Ethiopian ride service</p>
+<p>📞 0934567890</p>
+<a href="tel:0934567890">
+  <button class="call-btn">Call Now</button>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>Minibus Taxi</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Common public transport</p>
+<p>📞 Local stations</p>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>City Bus</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Low-cost city travel</p>
+<p>📞 Bus terminals</p>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>Train</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Addis Ababa to Djibouti railway</p>
+<p>📞 Railway service</p>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>Bike Ride</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Short-distance travel</p>
+<p>📞 Local riders</p>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>Car Rental</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Private car hire services</p>
+<p>📞 0945678901</p>
+<a href="tel:0945678901"></a>
+</div>
+</div>
+
+<!-- 9 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>Tour Bus</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Group travel for tourists</p>
+<p>📞 0956789012</p>
+<a href="tel:0956789012"></a>
+</div>
+</div>
+
+<!-- 10 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1725300554935-51da71f0a9dd?w=500">
+<h3>Airport Taxi</h3>
+<button onclick="toggleDetail(this)">Explore</button>
+<div class="card-detail">
+<p>Transport from airport</p>
+<p>📞 0967890123</p>
+<a href="tel:0967890123"></a>
+</div>
+</div>
+
+</div>
+
+<!-- CHAT -->
+<div class="chat-toggle" onclick="toggleChat()">💬</div>
+
+<div class="chat-box" id="chatBox">
+  <div class="chat-header" onclick="toggleChat()">AI Assistant ✖</div>
+  <div class="chat-body" id="chatBody"></div>
+  <input type="text" id="chatInput" placeholder="Ask...">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
