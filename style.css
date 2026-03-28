@@ -1,0 +1,99 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+/* Snap Scrolling */
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.panel {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Middle Cards */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    width: 350px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.explore-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 25px;
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    background: linear-gradient(green,yellow,red);
+    overflow: hidden;
+    transition: 0.2s;
+    z-index: 1000;
+}
+
+.sidebar.active { width: 200px; }
+
+.sidebar ul { list-style: none; margin-top: 60px; }
+
+.sidebar li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.sidebar li span { margin-left: 20px; display: none; }
+.sidebar.active li span { display: inline; }
+
+.toggle-btn {
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+/* AI Chat Box */
+.ai-chat-container { position: fixed; bottom: 20px; right: 20px; z-index: 2000; }
+.chat-button {
+    width: 60px; height: 60px; background: white; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); cursor: pointer;
+}
+.chat-window {
+    position: absolute; bottom: 80px; right: 0; width: 300px; height: 400px;
+    background: white; border-radius: 15px; display: none;
+    flex-direction: column; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.chat-window.show { display: flex; }
+.chat-header { background: #fafafa; padding: 15px; font-weight: bold; border-bottom: 1px solid #eee; }
+.chat-body { flex: 1; padding: 15px; font-size: 14px; overflow-y: auto; }
+.chat-input { padding: 10px; border-top: 1px solid #eee; }
+.chat-input input { width: 100%; border: none; outline: none; padding: 5px; }

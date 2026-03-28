@@ -1,0 +1,40 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "sqlproj: Build ETIOPIA",
+			"type": "process",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"/workspaces/ETHIOPIA-/ETIOPIA/ETIOPIA.sqlproj"
+			],
+			"problemMatcher": "$sqlproj-problem-matcher",
+			"isBackground": true,
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"detail": "Builds the ETIOPIA SQL project"
+		},
+		{
+			"label": "sqlproj: Build ETHIOPIA",
+			"type": "process",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"/workspaces/ETHIOPIA-/.git/ETHIOPIA/ETHIOPIA.sqlproj",
+				"/p:NetCoreBuild=true",
+				"/p:NETCoreTargetsPath=/home/codespace/.vscode-remote/extensions/ms-mssql.sql-database-projects-vscode-1.5.8/BuildDirectory",
+				"/p:SystemDacpacsLocation=/home/codespace/.vscode-remote/extensions/ms-mssql.sql-database-projects-vscode-1.5.8/BuildDirectory"
+			],
+			"problemMatcher": "$sqlproj-problem-matcher",
+			"isBackground": true,
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Builds the ETHIOPIA SQL project"
+		}
+	]
+}
