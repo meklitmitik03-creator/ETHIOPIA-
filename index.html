@@ -21,38 +21,49 @@
     </nav>
 
     <main class="container">
-        <section class="panel" style="background-image: url('https://images.unsplash.com/photo-1608634193723-1865aa4416ce?auto=format&fit=crop&q=80');">
-            <div class="card">
-                <h2>Transport</h2>
-                <p>Explore Ethiopia by air or road.</p>
-                <button class="explore-btn">Explore</button>
-            </div>
-        </section>
+    <section class="panel" id="transport" style="background-image: url('https://images.unsplash.com/photo-1608634193723-1865aa4416ce?auto=format&fit=crop&q=80');">
+        <div class="card fade-in">
+            <div class="icon"><i class="fas fa-bus"></i></div>
+            <h2>Transport</h2>
+            <p>From Ethiopian Airlines to local 4x4 treks, find your way around the Horn of Africa.</p>
+            <button class="explore-btn" onclick="explore('Transport')">Explore Options</button>
+        </div>
+    </section>
 
-        <section class="panel" style="background-image: url('https://images.unsplash.com/photo-1634029878815-1bb307302471?auto=format&fit=crop&q=80');">
-            <div class="card">
-                <h2>Location</h2>
-                <p>From the Danakil to the Simiens.</p>
-                <button class="explore-btn">Explore</button>
-            </div>
-        </section>
+    <section class="panel" id="location" style="background-image: url('https://images.unsplash.com/photo-1634029878815-1bb307302471?auto=format&fit=crop&q=80');">
+        <div class="card fade-in">
+            <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h2>Location</h2>
+            <p>Discover the Danakil Depression, the Simien Peaks, and the Omo Valley.</p>
+            <button class="explore-btn" onclick="explore('Location')">View Map</button>
+        </div>
+    </section>
 
-        <section class="panel" style="background-image: url('https://images.unsplash.com/photo-1629995015838-ea0e985d8d1a?auto=format&fit=crop&q=80');">
-            <div class="card">
-                <h2>Books</h2>
-                <p>Read about our 3,000 year history.</p>
-                <button class="explore-btn">Explore</button>
-            </div>
-        </section>
+    <section class="panel" id="books" style="background-image: url('https://images.unsplash.com/photo-1629995015838-ea0e985d8d1a?auto=format&fit=crop&q=80');">
+        <div class="card fade-in">
+            <div class="icon"><i class="fas fa-book-open"></i></div>
+            <h2>Books & Lore</h2>
+            <p>Dive into the ancient manuscripts and stories of the Solomonic dynasty.</p>
+            <button class="explore-btn" onclick="explore('History')">Read More</button>
+        </div>
+    </section>
 
-        <section class="panel" style="background-image: url('https://plus.unsplash.com/premium_photo-1697729902269-70f031f22531?auto=format&fit=crop&q=80');">
-            <div class="card">
-                <h2>Contact</h2>
-                <p>Get in touch with local guides.</p>
-                <button class="explore-btn">Explore</button>
-            </div>
-        </section>
-    </main>
+    <section class="panel" id="contact" style="background-image: url('https://plus.unsplash.com/premium_photo-1697729902269-70f031f22531?auto=format&fit=crop&q=80');">
+        <div class="card fade-in">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <h2>Get in Touch</h2>
+            <p>Connect with certified local guides and travel experts in Addis Ababa.</p>
+            <button class="explore-btn" onclick="explore('Contact')">Contact Us</button>
+        </div>
+    </section>
+</main>
+
+<div id="exploreModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalData">Loading...</div>
+    </div>
+</div>
 
     <div class="ai-chat-container">
         <div class="chat-button" onclick="toggleChat()">
